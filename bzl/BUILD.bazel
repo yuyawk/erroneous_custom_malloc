@@ -1,0 +1,17 @@
+"""Define the target needed for `cc_oom_test`.
+"""
+
+cc_library(
+    name = "erroneous_malloc",
+    srcs = [
+        "erroneous_malloc.c",
+    ],
+    hdrs = [
+        "erroneous_malloc.h",
+    ],
+    linkstatic = True,
+    visibility = [
+        "//tests:__pkg__",
+    ],
+    alwayslink = True,
+)

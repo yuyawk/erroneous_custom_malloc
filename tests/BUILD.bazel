@@ -1,0 +1,9 @@
+load("//bzl:cc_oom_test.bzl", "cc_oom_test")
+
+cc_oom_test(
+    name = "check_oom_case",
+    timeout = "short",
+    srcs = [
+        "check_oom_case.cpp",
+    ],
+)
